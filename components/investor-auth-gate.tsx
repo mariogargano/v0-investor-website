@@ -8,8 +8,8 @@ import { Input } from "@/components/ui/input"
 import { NDAgreement } from "@/components/nda-agreement"
 
 // Passwords
-const VISITOR_PASSWORD = "WEEK2025"
-const TEAM_PASSWORD = "WEEKTEAM2025"
+const VISITOR_PASSWORD = "021117"
+const TEAM_PASSWORD = "021117"
 
 // Storage keys
 const AUTH_KEY = "wc-auth"
