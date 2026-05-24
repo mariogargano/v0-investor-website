@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer"
 import { InvestmentOffer } from "@/components/investment-offer"
 import { EcosystemRevenue } from "@/components/ecosystem-revenue"
 import { BusinessFlow } from "@/components/business-flow"
+import { CorporateStructure } from "@/components/corporate-structure"
 import { DownloadPitchDeck } from "@/components/download-pitch-deck"
 import { NDAStatusIndicator } from "@/components/protected-download"
 import Link from "next/link"
@@ -33,7 +34,11 @@ export default function InvestorPortal() {
         <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <p className="text-sm text-primary font-medium tracking-wide mb-4">WEEK-CHAIN DATA ROOM</p>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-6">
+                <span className="text-xs font-mono text-primary">SEED ROUND 2026</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-chart-3 animate-pulse" />
+                <span className="text-xs text-chart-3 font-medium">Q2 PRE-LAUNCH</span>
+              </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-balance">
                 {t("heroTitle")} <br className="hidden md:block" />
                 <span className="gradient-text">{t("heroTitleHighlight")}</span>
@@ -46,20 +51,29 @@ export default function InvestorPortal() {
             </div>
 
             {/* Key Investment Metrics */}
-            <div className="bg-card border border-border rounded-2xl p-8 max-w-3xl mx-auto mb-12">
-              <div className="grid grid-cols-3 gap-8 text-center">
+            <div className="bg-card border border-border rounded-2xl p-8 max-w-4xl mx-auto mb-12">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                 <div>
                   <p className="text-3xl md:text-4xl font-bold text-primary">$35K</p>
                   <p className="text-sm text-muted-foreground mt-1">per 1% equity</p>
                 </div>
-                <div className="border-x border-border">
+                <div className="border-l border-border pl-6">
                   <p className="text-3xl md:text-4xl font-bold">$3.5M</p>
                   <p className="text-sm text-muted-foreground mt-1">pre-money valuation</p>
                 </div>
-                <div>
+                <div className="border-l border-border pl-6">
                   <p className="text-3xl md:text-4xl font-bold text-accent">9</p>
                   <p className="text-sm text-muted-foreground mt-1">revenue streams</p>
                 </div>
+                <div className="border-l border-border pl-6">
+                  <p className="text-3xl md:text-4xl font-bold text-chart-3">8%</p>
+                  <p className="text-sm text-muted-foreground mt-1">IP royalty</p>
+                </div>
+              </div>
+              <div className="mt-6 pt-6 border-t border-border text-center">
+                <p className="text-xs text-muted-foreground">
+                  <span className="font-semibold text-foreground">REaaS Model</span> — Real Estate as a Service | Asset-Light | 15-Year Certificates | 48+4 Weeks/Property
+                </p>
               </div>
             </div>
 
@@ -143,6 +157,9 @@ export default function InvestorPortal() {
         {/* Investment Offer Section */}
         <InvestmentOffer />
 
+        {/* Corporate Structure */}
+        <CorporateStructure />
+
         {/* Ecosystem Revenue */}
         <EcosystemRevenue />
 
@@ -155,13 +172,16 @@ export default function InvestorPortal() {
             <div className="bg-card border border-border rounded-xl p-6 flex gap-4">
               <Shield className="w-6 h-6 text-muted-foreground flex-shrink-0" />
               <div>
-                <h4 className="font-semibold mb-2">Important Legal Notice</h4>
+                <h4 className="font-semibold mb-2">Compliance de No-Inversión (SEC/CNBV)</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                  Los Smart Vacational Certificates (SVCs) son productos de <strong>consumo vacacional prepagado</strong>, 
+                  NO instrumentos de inversión, valores, ni fracciones inmobiliarias. El usuario adquiere un derecho 
+                  de hospedaje flotante sin expectativa de ganancias, dividendos o rendimientos financieros.
+                </p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Smart Vacational Certificates (SVCs) are SERVICE products that grant vacation usage rights. 
-                  They are <strong>NOT investment instruments, securities, or real estate fractions</strong>. 
-                  The investment opportunity presented in this Data Room is exclusively in equity of WEEK-CHAIN 
-                  as a corporate entity. All investments are subject to the terms of the shareholder agreement 
-                  and applicable securities regulations.
+                  La oportunidad de inversión presentada en este Data Room es exclusivamente en <strong>equity de MORISES LLC</strong> (HoldCo, Wyoming) 
+                  como entidad corporativa. Todas las inversiones están sujetas a los términos del acuerdo de accionistas 
+                  y las regulaciones de valores aplicables. Solo para inversionistas acreditados.
                 </p>
               </div>
             </div>
