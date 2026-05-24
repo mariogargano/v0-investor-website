@@ -17,6 +17,7 @@ import {
   Handshake,
   Globe,
   TrendingUp,
+  FolderOpen,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -98,8 +99,20 @@ export default function InvestorPortal() {
 
         {/* Navigation Cards */}
         <section className="py-12 px-4 sm:px-6 lg:px-8 border-y border-border">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-4 gap-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-5 gap-4">
+              <Link 
+                href="/data-room" 
+                className="bg-primary/10 border border-primary/30 rounded-xl p-5 hover:bg-primary/20 transition-all group"
+              >
+                <FolderOpen className="w-6 h-6 text-primary mb-3" />
+                <h3 className="font-semibold mb-1 text-primary">{t("navDataRoom")}</h3>
+                <p className="text-sm text-muted-foreground">{t("navDataRoomDesc")}</p>
+                <div className="flex items-center gap-1 text-xs text-primary mt-3">
+                  {t("navAccess")} <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+              
               <Link 
                 href="/modelo" 
                 className="bg-card border border-border rounded-xl p-5 hover:border-primary/50 transition-all group"
@@ -108,7 +121,7 @@ export default function InvestorPortal() {
                 <h3 className="font-semibold mb-1 group-hover:text-primary transition-colors">{t("cardModel")}</h3>
                 <p className="text-sm text-muted-foreground">{t("cardModelDesc")}</p>
                 <div className="flex items-center gap-1 text-xs text-primary mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                  View details <ArrowRight className="w-3 h-3" />
+                  {t("navViewDetails")} <ArrowRight className="w-3 h-3" />
                 </div>
               </Link>
               
@@ -120,7 +133,7 @@ export default function InvestorPortal() {
                 <h3 className="font-semibold mb-1 group-hover:text-primary transition-colors">{t("cardEcosystem")}</h3>
                 <p className="text-sm text-muted-foreground">{t("cardEcosystemDesc")}</p>
                 <div className="flex items-center gap-1 text-xs text-primary mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                  View details <ArrowRight className="w-3 h-3" />
+                  {t("navViewDetails")} <ArrowRight className="w-3 h-3" />
                 </div>
               </Link>
               
@@ -130,21 +143,21 @@ export default function InvestorPortal() {
               >
                 <Handshake className="w-6 h-6 text-primary mb-3" />
                 <h3 className="font-semibold mb-1 group-hover:text-primary transition-colors">{t("navPartners")}</h3>
-                <p className="text-sm text-muted-foreground">Service provider opportunities</p>
+                <p className="text-sm text-muted-foreground">{t("navPartnersDesc")}</p>
                 <div className="flex items-center gap-1 text-xs text-primary mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                  View details <ArrowRight className="w-3 h-3" />
+                  {t("navViewDetails")} <ArrowRight className="w-3 h-3" />
                 </div>
               </Link>
               
               <Link 
                 href="/invertir" 
-                className="bg-primary/10 border border-primary/30 rounded-xl p-5 hover:bg-primary/20 transition-all group"
+                className="bg-accent/10 border border-accent/30 rounded-xl p-5 hover:bg-accent/20 transition-all group"
               >
-                <TrendingUp className="w-6 h-6 text-primary mb-3" />
-                <h3 className="font-semibold mb-1 text-primary">Invest Now</h3>
-                <p className="text-sm text-muted-foreground">Complete the investment process</p>
-                <div className="flex items-center gap-1 text-xs text-primary mt-3">
-                  Get started <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                <TrendingUp className="w-6 h-6 text-accent mb-3" />
+                <h3 className="font-semibold mb-1 text-accent">{t("navInvest")}</h3>
+                <p className="text-sm text-muted-foreground">{t("navInvestDesc")}</p>
+                <div className="flex items-center gap-1 text-xs text-accent mt-3">
+                  {t("navGetStarted")} <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
             </div>
