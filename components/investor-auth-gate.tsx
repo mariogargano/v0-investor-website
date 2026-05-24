@@ -5,7 +5,8 @@ import { useState, useEffect } from "react"
 import { Lock, Eye, EyeOff, Users, TrendingUp, Handshake, ArrowRight, Shield } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { NDAgreement } from "@/components/nda-agreement"
+import { NDAProvider } from "@/lib/nda-context"
+import { NDAModal } from "@/components/nda-modal"
 
 // Passwords
 const VISITOR_PASSWORD = "021117"
@@ -14,23 +15,11 @@ const TEAM_PASSWORD = "021117"
 // Storage keys
 const AUTH_KEY = "wc-auth"
 const USER_TYPE_KEY = "wc-user-type"
-const NDA_KEY = "wc-nda-complete"
 
 type UserType = "investor" | "partner" | "team"
-type AuthStep = "loading" | "password" | "user-type" | "team-verify" | "nda" | "complete"
+type AuthStep = "loading" | "password" | "user-type" | "team-verify" | "complete"
 
-interface AccessData {
-  userType: UserType
-  fullName?: string
-  email?: string
-  company?: string
-  title?: string
-  ndaSigned: boolean
-  accessTime: string
-  userAgent: string
-}
-
-async function notifyAccess(data: AccessData) {
+async function notifyAccess(data: { userType: UserType; accessTime: string; userAgent: string }) {
   try {
     await fetch("/api/notify-access", {
       method: "POST",
@@ -52,16 +41,11 @@ export function InvestorAuthGate({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const auth = sessionStorage.getItem(AUTH_KEY)
-    const nda = sessionStorage.getItem(NDA_KEY)
     const userType = sessionStorage.getItem(USER_TYPE_KEY) as UserType | null
 
-    if (auth === "true") {
-      if (userType === "team" || nda === "true") {
-        setAuthStep("complete")
-      } else {
-        setSelectedUserType(userType)
-        setAuthStep("nda")
-      }
+    if (auth === "true" && userType) {
+      setSelectedUserType(userType)
+      setAuthStep("complete")
     } else {
       setAuthStep("password")
     }
@@ -83,8 +67,18 @@ export function InvestorAuthGate({ children }: { children: React.ReactNode }) {
     if (type === "team") {
       setAuthStep("team-verify")
     } else {
+      // Grant access immediately for investors/partners
+      sessionStorage.setItem(AUTH_KEY, "true")
       sessionStorage.setItem(USER_TYPE_KEY, type)
-      setAuthStep("nda")
+      
+      // Notify access
+      notifyAccess({
+        userType: type,
+        accessTime: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+      })
+      
+      setAuthStep("complete")
     }
   }
 
@@ -94,10 +88,8 @@ export function InvestorAuthGate({ children }: { children: React.ReactNode }) {
       sessionStorage.setItem(AUTH_KEY, "true")
       sessionStorage.setItem(USER_TYPE_KEY, "team")
       
-      // Notify access for team member
       notifyAccess({
         userType: "team",
-        ndaSigned: false,
         accessTime: new Date().toISOString(),
         userAgent: navigator.userAgent,
       })
@@ -109,25 +101,6 @@ export function InvestorAuthGate({ children }: { children: React.ReactNode }) {
     }
   }
 
-  const handleNDAComplete = (ndaData: { fullName: string; email: string; company: string; title: string }) => {
-    sessionStorage.setItem(AUTH_KEY, "true")
-    sessionStorage.setItem(NDA_KEY, "true")
-    
-    // Notify access with NDA data
-    notifyAccess({
-      userType: selectedUserType || "investor",
-      fullName: ndaData.fullName,
-      email: ndaData.email,
-      company: ndaData.company,
-      title: ndaData.title,
-      ndaSigned: true,
-      accessTime: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-    })
-    
-    setAuthStep("complete")
-  }
-
   if (authStep === "loading") {
     return (
       <div className="fixed inset-0 z-[9999] bg-background flex items-center justify-center">
@@ -136,12 +109,13 @@ export function InvestorAuthGate({ children }: { children: React.ReactNode }) {
     )
   }
 
-  if (authStep === "nda") {
-    return <NDAgreement userType={selectedUserType || "investor"} onComplete={handleNDAComplete} />
-  }
-
   if (authStep === "complete") {
-    return <>{children}</>
+    return (
+      <NDAProvider>
+        {children}
+        <NDAModal />
+      </NDAProvider>
+    )
   }
 
   return (

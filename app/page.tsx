@@ -1,9 +1,12 @@
+"use client"
+
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { InvestmentOffer } from "@/components/investment-offer"
 import { EcosystemRevenue } from "@/components/ecosystem-revenue"
 import { BusinessFlow } from "@/components/business-flow"
 import { DownloadPitchDeck } from "@/components/download-pitch-deck"
+import { NDAStatusIndicator } from "@/components/protected-download"
 import Link from "next/link"
 import { useLanguage } from "@/lib/i18n"
 import { 
@@ -13,7 +16,6 @@ import {
   Handshake,
   Globe,
   TrendingUp,
-  Download // Declared Download variable
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -62,7 +64,7 @@ export default function InvestorPortal() {
             </div>
 
             {/* Download Pitch Deck */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
               <DownloadPitchDeck size="lg" variant="default" />
               <Button size="lg" variant="outline" asChild>
                 <Link href="/invertir" className="gap-2">
@@ -71,6 +73,11 @@ export default function InvestorPortal() {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>
+            </div>
+            
+            {/* NDA Status */}
+            <div className="flex justify-center">
+              <NDAStatusIndicator />
             </div>
           </div>
         </section>
