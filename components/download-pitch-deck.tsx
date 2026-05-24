@@ -16,13 +16,12 @@ export function DownloadPitchDeck({ variant = "outline", size = "default", class
   const { executeWithNDA, isNDASigned } = useNDAGatedAction()
   
   const performDownload = () => {
-    // In production, this would link to the actual pitch deck file
     const link = document.createElement("a")
-    link.href = "/documents/WEEK-CHAIN-Pitch-Deck.pdf"
-    link.download = "WEEK-CHAIN-Pitch-Deck.pdf"
-    
-    // If file doesn't exist, show message
-    alert("Pitch Deck download will start. Contact corporativo@morises.com for any questions.")
+    link.href = "/documents/WEEK-CHAIN_Investor_Pitch_Deck_2026.pdf"
+    link.download = "WEEK-CHAIN_Investor_Pitch_Deck_2026.pdf"
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
   }
 
   const handleDownload = () => {
