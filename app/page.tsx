@@ -6,6 +6,7 @@ import { InvestmentOffer } from "@/components/investment-offer"
 import { EcosystemRevenue } from "@/components/ecosystem-revenue"
 import { BusinessFlow } from "@/components/business-flow"
 import { CorporateStructure } from "@/components/corporate-structure"
+import { InvestmentScenario } from "@/components/investment-scenario"
 import { DownloadPitchDeck } from "@/components/download-pitch-deck"
 import { NDAStatusIndicator } from "@/components/protected-download"
 import Link from "next/link"
@@ -169,6 +170,9 @@ export default function InvestorPortal() {
 
         {/* Investment Offer Section */}
         <InvestmentOffer />
+
+        {/* Investment Scenario - ROI Analysis */}
+        <InvestmentScenario />
 
         {/* Corporate Structure */}
         <CorporateStructure />
