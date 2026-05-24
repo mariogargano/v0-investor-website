@@ -102,6 +102,14 @@ export const translations = {
     
     // Navigation
     navPartners: "Partners",
+    navPartnersDesc: "Service provider opportunities",
+    navDataRoom: "Data Room",
+    navDataRoomDesc: "Due diligence documents",
+    navInvest: "Invest Now",
+    navInvestDesc: "Complete investment process",
+    navViewDetails: "View details",
+    navAccess: "Access",
+    navGetStarted: "Get started",
     backToHome: "Back to Home",
     
     // Business Model Page
@@ -242,6 +250,14 @@ export const translations = {
     
     // Navigation
     navPartners: "Partners",
+    navPartnersDesc: "Oportunidades para proveedores",
+    navDataRoom: "Data Room",
+    navDataRoomDesc: "Documentos due diligence",
+    navInvest: "Invertir Ahora",
+    navInvestDesc: "Completar proceso de inversion",
+    navViewDetails: "Ver detalles",
+    navAccess: "Acceder",
+    navGetStarted: "Comenzar",
     backToHome: "Volver al inicio",
     
     // Business Model Page
@@ -382,7 +398,15 @@ export const translations = {
     
     // Navigation
     navPartners: "Partners",
-    backToHome: "Voltar ao início",
+    navPartnersDesc: "Oportunidades para fornecedores",
+    navDataRoom: "Data Room",
+    navDataRoomDesc: "Documentos due diligence",
+    navInvest: "Investir Agora",
+    navInvestDesc: "Completar processo de investimento",
+    navViewDetails: "Ver detalhes",
+    navAccess: "Acessar",
+    navGetStarted: "Comecar",
+    backToHome: "Voltar ao inicio",
     
     // Business Model Page
     businessModelBadge: "Modelo de Negócio",
@@ -522,6 +546,14 @@ export const translations = {
     
     // Navigation
     navPartners: "Partners",
+    navPartnersDesc: "Opportunita per fornitori",
+    navDataRoom: "Data Room",
+    navDataRoomDesc: "Documenti due diligence",
+    navInvest: "Investi Ora",
+    navInvestDesc: "Completa processo di investimento",
+    navViewDetails: "Vedi dettagli",
+    navAccess: "Accedi",
+    navGetStarted: "Inizia",
     backToHome: "Torna alla home",
     
     // Business Model Page
@@ -662,7 +694,15 @@ export const translations = {
     
     // Navigation
     navPartners: "Partners",
-    backToHome: "Retour à l'accueil",
+    navPartnersDesc: "Opportunites pour fournisseurs",
+    navDataRoom: "Data Room",
+    navDataRoomDesc: "Documents due diligence",
+    navInvest: "Investir Maintenant",
+    navInvestDesc: "Completez le processus d investissement",
+    navViewDetails: "Voir details",
+    navAccess: "Acceder",
+    navGetStarted: "Commencer",
+    backToHome: "Retour a l accueil",
     
     // Business Model Page
     businessModelBadge: "Modèle Commercial",

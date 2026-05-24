@@ -1,9 +1,14 @@
+"use client"
+
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { InvestmentOffer } from "@/components/investment-offer"
 import { EcosystemRevenue } from "@/components/ecosystem-revenue"
 import { BusinessFlow } from "@/components/business-flow"
+import { CorporateStructure } from "@/components/corporate-structure"
+import { InvestmentScenario } from "@/components/investment-scenario"
 import { DownloadPitchDeck } from "@/components/download-pitch-deck"
+import { NDAStatusIndicator } from "@/components/protected-download"
 import Link from "next/link"
 import { useLanguage } from "@/lib/i18n"
 import { 
@@ -13,7 +18,7 @@ import {
   Handshake,
   Globe,
   TrendingUp,
-  Download // Declared Download variable
+  FolderOpen,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -31,7 +36,11 @@ export default function InvestorPortal() {
         <section className="py-16 md:py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <p className="text-sm text-primary font-medium tracking-wide mb-4">WEEK-CHAIN DATA ROOM</p>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 mb-6">
+                <span className="text-xs font-mono text-primary">SEED ROUND 2026</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-chart-3 animate-pulse" />
+                <span className="text-xs text-chart-3 font-medium">Q2 PRE-LAUNCH</span>
+              </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-balance">
                 {t("heroTitle")} <br className="hidden md:block" />
                 <span className="gradient-text">{t("heroTitleHighlight")}</span>
@@ -44,25 +53,34 @@ export default function InvestorPortal() {
             </div>
 
             {/* Key Investment Metrics */}
-            <div className="bg-card border border-border rounded-2xl p-8 max-w-3xl mx-auto mb-12">
-              <div className="grid grid-cols-3 gap-8 text-center">
+            <div className="bg-card border border-border rounded-2xl p-8 max-w-4xl mx-auto mb-12">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                 <div>
                   <p className="text-3xl md:text-4xl font-bold text-primary">$35K</p>
                   <p className="text-sm text-muted-foreground mt-1">per 1% equity</p>
                 </div>
-                <div className="border-x border-border">
+                <div className="border-l border-border pl-6">
                   <p className="text-3xl md:text-4xl font-bold">$3.5M</p>
                   <p className="text-sm text-muted-foreground mt-1">pre-money valuation</p>
                 </div>
-                <div>
+                <div className="border-l border-border pl-6">
                   <p className="text-3xl md:text-4xl font-bold text-accent">9</p>
                   <p className="text-sm text-muted-foreground mt-1">revenue streams</p>
                 </div>
+                <div className="border-l border-border pl-6">
+                  <p className="text-3xl md:text-4xl font-bold text-chart-3">8%</p>
+                  <p className="text-sm text-muted-foreground mt-1">IP royalty</p>
+                </div>
+              </div>
+              <div className="mt-6 pt-6 border-t border-border text-center">
+                <p className="text-xs text-muted-foreground">
+                  <span className="font-semibold text-foreground">REaaS Model</span> — Real Estate as a Service | Asset-Light | 15-Year Certificates | 48+4 Weeks/Property
+                </p>
               </div>
             </div>
 
             {/* Download Pitch Deck */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
               <DownloadPitchDeck size="lg" variant="default" />
               <Button size="lg" variant="outline" asChild>
                 <Link href="/invertir" className="gap-2">
@@ -72,13 +90,30 @@ export default function InvestorPortal() {
                 </Link>
               </Button>
             </div>
+            
+            {/* NDA Status */}
+            <div className="flex justify-center">
+              <NDAStatusIndicator />
+            </div>
           </div>
         </section>
 
         {/* Navigation Cards */}
         <section className="py-12 px-4 sm:px-6 lg:px-8 border-y border-border">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-4 gap-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-5 gap-4">
+              <Link 
+                href="/data-room" 
+                className="bg-primary/10 border border-primary/30 rounded-xl p-5 hover:bg-primary/20 transition-all group"
+              >
+                <FolderOpen className="w-6 h-6 text-primary mb-3" />
+                <h3 className="font-semibold mb-1 text-primary">{t("navDataRoom")}</h3>
+                <p className="text-sm text-muted-foreground">{t("navDataRoomDesc")}</p>
+                <div className="flex items-center gap-1 text-xs text-primary mt-3">
+                  {t("navAccess")} <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+              
               <Link 
                 href="/modelo" 
                 className="bg-card border border-border rounded-xl p-5 hover:border-primary/50 transition-all group"
@@ -87,7 +122,7 @@ export default function InvestorPortal() {
                 <h3 className="font-semibold mb-1 group-hover:text-primary transition-colors">{t("cardModel")}</h3>
                 <p className="text-sm text-muted-foreground">{t("cardModelDesc")}</p>
                 <div className="flex items-center gap-1 text-xs text-primary mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                  View details <ArrowRight className="w-3 h-3" />
+                  {t("navViewDetails")} <ArrowRight className="w-3 h-3" />
                 </div>
               </Link>
               
@@ -99,7 +134,7 @@ export default function InvestorPortal() {
                 <h3 className="font-semibold mb-1 group-hover:text-primary transition-colors">{t("cardEcosystem")}</h3>
                 <p className="text-sm text-muted-foreground">{t("cardEcosystemDesc")}</p>
                 <div className="flex items-center gap-1 text-xs text-primary mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                  View details <ArrowRight className="w-3 h-3" />
+                  {t("navViewDetails")} <ArrowRight className="w-3 h-3" />
                 </div>
               </Link>
               
@@ -109,21 +144,21 @@ export default function InvestorPortal() {
               >
                 <Handshake className="w-6 h-6 text-primary mb-3" />
                 <h3 className="font-semibold mb-1 group-hover:text-primary transition-colors">{t("navPartners")}</h3>
-                <p className="text-sm text-muted-foreground">Service provider opportunities</p>
+                <p className="text-sm text-muted-foreground">{t("navPartnersDesc")}</p>
                 <div className="flex items-center gap-1 text-xs text-primary mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                  View details <ArrowRight className="w-3 h-3" />
+                  {t("navViewDetails")} <ArrowRight className="w-3 h-3" />
                 </div>
               </Link>
               
               <Link 
                 href="/invertir" 
-                className="bg-primary/10 border border-primary/30 rounded-xl p-5 hover:bg-primary/20 transition-all group"
+                className="bg-accent/10 border border-accent/30 rounded-xl p-5 hover:bg-accent/20 transition-all group"
               >
-                <TrendingUp className="w-6 h-6 text-primary mb-3" />
-                <h3 className="font-semibold mb-1 text-primary">Invest Now</h3>
-                <p className="text-sm text-muted-foreground">Complete the investment process</p>
-                <div className="flex items-center gap-1 text-xs text-primary mt-3">
-                  Get started <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                <TrendingUp className="w-6 h-6 text-accent mb-3" />
+                <h3 className="font-semibold mb-1 text-accent">{t("navInvest")}</h3>
+                <p className="text-sm text-muted-foreground">{t("navInvestDesc")}</p>
+                <div className="flex items-center gap-1 text-xs text-accent mt-3">
+                  {t("navGetStarted")} <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
             </div>
@@ -135,6 +170,12 @@ export default function InvestorPortal() {
 
         {/* Investment Offer Section */}
         <InvestmentOffer />
+
+        {/* Investment Scenario - ROI Analysis */}
+        <InvestmentScenario />
+
+        {/* Corporate Structure */}
+        <CorporateStructure />
 
         {/* Ecosystem Revenue */}
         <EcosystemRevenue />
@@ -148,13 +189,16 @@ export default function InvestorPortal() {
             <div className="bg-card border border-border rounded-xl p-6 flex gap-4">
               <Shield className="w-6 h-6 text-muted-foreground flex-shrink-0" />
               <div>
-                <h4 className="font-semibold mb-2">Important Legal Notice</h4>
+                <h4 className="font-semibold mb-2">Compliance de No-Inversión (SEC/CNBV)</h4>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                  Los Smart Vacational Certificates (SVCs) son productos de <strong>consumo vacacional prepagado</strong>, 
+                  NO instrumentos de inversión, valores, ni fracciones inmobiliarias. El usuario adquiere un derecho 
+                  de hospedaje flotante sin expectativa de ganancias, dividendos o rendimientos financieros.
+                </p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Smart Vacational Certificates (SVCs) are SERVICE products that grant vacation usage rights. 
-                  They are <strong>NOT investment instruments, securities, or real estate fractions</strong>. 
-                  The investment opportunity presented in this Data Room is exclusively in equity of WEEK-CHAIN 
-                  as a corporate entity. All investments are subject to the terms of the shareholder agreement 
-                  and applicable securities regulations.
+                  La oportunidad de inversión presentada en este Data Room es exclusivamente en <strong>equity de MORISES LLC</strong> (HoldCo, Wyoming) 
+                  como entidad corporativa. Todas las inversiones están sujetas a los términos del acuerdo de accionistas 
+                  y las regulaciones de valores aplicables. Solo para inversionistas acreditados.
                 </p>
               </div>
             </div>

@@ -2,10 +2,10 @@
 
 import { PageLayout } from "@/components/page-layout"
 import { ProblemSolution } from "@/components/problem-solution"
-import { HowItWorks } from "@/components/how-it-works"
 import { PricingTable } from "@/components/pricing-table"
 import { CertificateShowcase } from "@/components/certificate-showcase"
 import { WeekServices } from "@/components/week-services"
+import { SVCMachineFlow } from "@/components/svc-machine-flow"
 import { DownloadPitchDeckBanner } from "@/components/download-pitch-deck"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
@@ -45,7 +45,7 @@ export default function ModeloPage() {
       </div>
 
       <ProblemSolution />
-      <HowItWorks />
+      <SVCMachineFlow />
       <PricingTable />
       <WeekServices />
       <CertificateShowcase />

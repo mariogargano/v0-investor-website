@@ -18,10 +18,10 @@ export function InvestmentOffer() {
   
   const content = {
     en: {
-      badge: "Investment Opportunity",
+      badge: "Seed Round 2026",
       title: "Acquire",
       titleHighlight: "1% Equity",
-      subtitle: "Join WEEK-CHAIN as a strategic partner in the PropTech revolution",
+      subtitle: "Join WEEK-CHAIN as a strategic partner in the PropTech revolution. Asset-light model with 9 integrated revenue streams.",
       priceLabel: "Price per 1%",
       price: "$35,000 USD",
       valuationLabel: "Pre-money Valuation",
@@ -30,60 +30,97 @@ export function InvestmentOffer() {
       minAmount: "1% ($35,000)",
       maxInvestment: "Available Equity",
       maxAmount: "Up to 15%",
+      roundStatus: "Seed Round Status",
+      roundPhase: "Q2 2026 - Pre-Launch",
       whatYouGet: "What You Get",
       benefits: [
-        "Direct equity participation in Morises LLC (Wyoming, USA)",
-        "Share of recurring revenues from all WEEK-WORLD subsidiaries",
-        "Voting rights proportional to your stake",
+        "Direct equity participation in HoldCo (MORISES LLC, Wyoming)",
+        "Pro-rata share of 8% IP royalties on all SAPI sales",
+        "Participation in 9 satellite revenue streams (WEEK-WORLD)",
         "Quarterly financial reports and investor updates",
-        "Priority access to future funding rounds",
-        "Exit opportunities: secondary sales, buyback, or IPO"
+        "Priority access to Series A and future funding rounds",
+        "Exit: secondary sales, strategic buyback, or IPO/M&A"
       ],
       investorProfile: "Ideal Investor Profile",
       profiles: [
-        { label: "Angel Investors", desc: "Individual accredited investors seeking PropTech exposure" },
-        { label: "Family Offices", desc: "Long-term capital seeking real estate-backed returns" },
-        { label: "Venture Capital", desc: "Early-stage funds with travel/hospitality thesis" },
-        { label: "Strategic Partners", desc: "Real estate developers, hotel chains, travel platforms" }
+        { label: "Angel Investors", desc: "Individual accredited investors seeking PropTech/travel tech exposure" },
+        { label: "Family Offices", desc: "Long-term capital seeking real estate-backed recurring revenues" },
+        { label: "Venture Capital", desc: "Early-stage funds with travel, hospitality, or PropTech thesis" },
+        { label: "Strategic Partners", desc: "Real estate developers, hotel chains, OTAs, travel platforms" }
       ],
-      disclaimer: "This investment opportunity is available only to accredited investors as defined by applicable securities regulations. Past performance does not guarantee future results."
+      disclaimer: "This investment opportunity is available only to accredited investors as defined by SEC regulations. WEEK-CHAIN SVCs are consumer products, NOT investment instruments. Equity investment is in the corporate entity only."
+    },
+    es: {
+      badge: "Ronda Semilla 2026",
+      title: "Adquiere",
+      titleHighlight: "1% de Equity",
+      subtitle: "Únete a WEEK-CHAIN como socio estratégico en la revolución PropTech. Modelo asset-light con 9 flujos de ingresos integrados.",
+      priceLabel: "Precio por 1%",
+      price: "$35,000 USD",
+      valuationLabel: "Valuación Pre-money",
+      valuation: "$3.5M USD",
+      minInvestment: "Inversión Mínima",
+      minAmount: "1% ($35,000)",
+      maxInvestment: "Equity Disponible",
+      maxAmount: "Hasta 15%",
+      roundStatus: "Estatus de Ronda Semilla",
+      roundPhase: "Q2 2026 - Pre-Lanzamiento",
+      whatYouGet: "Lo Que Obtienes",
+      benefits: [
+        "Participación directa en equity del HoldCo (MORISES LLC, Wyoming)",
+        "Participación pro-rata del 8% de royalties de PI sobre ventas SAPI",
+        "Participación en 9 flujos de ingresos satélite (WEEK-WORLD)",
+        "Reportes financieros trimestrales y actualizaciones para inversionistas",
+        "Acceso prioritario a Serie A y futuras rondas",
+        "Salida: ventas secundarias, recompra estratégica, o IPO/M&A"
+      ],
+      investorProfile: "Perfil del Inversionista Ideal",
+      profiles: [
+        { label: "Inversionistas Ángel", desc: "Inversionistas acreditados buscando exposición PropTech/travel tech" },
+        { label: "Family Offices", desc: "Capital a largo plazo buscando ingresos recurrentes respaldados por bienes raíces" },
+        { label: "Venture Capital", desc: "Fondos early-stage con tesis en viajes, hospitalidad o PropTech" },
+        { label: "Socios Estratégicos", desc: "Desarrolladores inmobiliarios, cadenas hoteleras, OTAs, plataformas de viaje" }
+      ],
+      disclaimer: "Esta oportunidad de inversión está disponible solo para inversionistas acreditados según las regulaciones de la SEC. Los SVCs de WEEK-CHAIN son productos de consumo, NO instrumentos de inversión. La inversión en equity es solo en la entidad corporativa."
     },
     pt: {
-      badge: "Oportunidade de Investimento",
+      badge: "Rodada Semente 2026",
       title: "Adquira",
       titleHighlight: "1% de Equity",
-      subtitle: "Junte-se a WEEK-CHAIN como parceiro estrategico na revolucao PropTech",
-      priceLabel: "Preco por 1%",
+      subtitle: "Junte-se a WEEK-CHAIN como parceiro estratégico na revolução PropTech. Modelo asset-light com 9 fluxos de receita integrados.",
+      priceLabel: "Preço por 1%",
       price: "$35,000 USD",
-      valuationLabel: "Avaliacao Pre-money",
+      valuationLabel: "Avaliação Pre-money",
       valuation: "$3.5M USD",
-      minInvestment: "Investimento Minimo",
+      minInvestment: "Investimento Mínimo",
       minAmount: "1% ($35,000)",
-      maxInvestment: "Equity Disponivel",
-      maxAmount: "Ate 15%",
-      whatYouGet: "O Que Voce Recebe",
+      maxInvestment: "Equity Disponível",
+      maxAmount: "Até 15%",
+      roundStatus: "Status da Rodada Semente",
+      roundPhase: "Q2 2026 - Pré-Lançamento",
+      whatYouGet: "O Que Você Recebe",
       benefits: [
-        "Participacao direta em equity na Morises LLC (Wyoming, EUA)",
-        "Participacao nas receitas recorrentes de todas as subsidiarias WEEK-WORLD",
-        "Direitos de voto proporcionais a sua participacao",
-        "Relatorios financeiros trimestrais e atualizacoes para investidores",
-        "Acesso prioritario a futuras rodadas de financiamento",
-        "Oportunidades de saida: vendas secundarias, recompra ou IPO"
+        "Participação direta em equity na HoldCo (MORISES LLC, Wyoming)",
+        "Participação pro-rata de 8% de royalties de PI sobre vendas SAPI",
+        "Participação em 9 fluxos de receita satélite (WEEK-WORLD)",
+        "Relatórios financeiros trimestrais e atualizações para investidores",
+        "Acesso prioritário à Série A e futuras rodadas",
+        "Saída: vendas secundárias, recompra estratégica, ou IPO/M&A"
       ],
       investorProfile: "Perfil do Investidor Ideal",
       profiles: [
-        { label: "Investidores Anjo", desc: "Investidores credenciados buscando exposicao PropTech" },
-        { label: "Family Offices", desc: "Capital de longo prazo buscando retornos imobiliarios" },
-        { label: "Venture Capital", desc: "Fundos early-stage com tese em viagens/hospitalidade" },
-        { label: "Parceiros Estrategicos", desc: "Desenvolvedores imobiliarios, redes hoteleiras" }
+        { label: "Investidores Anjo", desc: "Investidores credenciados buscando exposição PropTech/travel tech" },
+        { label: "Family Offices", desc: "Capital de longo prazo buscando receitas recorrentes lastreadas em imóveis" },
+        { label: "Venture Capital", desc: "Fundos early-stage com tese em viagens, hospitalidade ou PropTech" },
+        { label: "Parceiros Estratégicos", desc: "Desenvolvedores imobiliários, redes hoteleiras, OTAs, plataformas de viagem" }
       ],
-      disclaimer: "Esta oportunidade de investimento esta disponivel apenas para investidores credenciados conforme definido pelas regulamentacoes de valores mobiliarios aplicaveis."
+      disclaimer: "Esta oportunidade de investimento está disponível apenas para investidores credenciados conforme regulamentações da SEC. Os SVCs da WEEK-CHAIN são produtos de consumo, NÃO instrumentos de investimento."
     },
     it: {
-      badge: "Opportunita di Investimento",
+      badge: "Round Seed 2026",
       title: "Acquisisci",
       titleHighlight: "1% di Equity",
-      subtitle: "Unisciti a WEEK-CHAIN come partner strategico nella rivoluzione PropTech",
+      subtitle: "Unisciti a WEEK-CHAIN come partner strategico nella rivoluzione PropTech. Modello asset-light con 9 flussi di ricavi integrati.",
       priceLabel: "Prezzo per 1%",
       price: "$35,000 USD",
       valuationLabel: "Valutazione Pre-money",
@@ -92,29 +129,31 @@ export function InvestmentOffer() {
       minAmount: "1% ($35,000)",
       maxInvestment: "Equity Disponibile",
       maxAmount: "Fino al 15%",
+      roundStatus: "Status Round Seed",
+      roundPhase: "Q2 2026 - Pre-Lancio",
       whatYouGet: "Cosa Ottieni",
       benefits: [
-        "Partecipazione diretta in equity in Morises LLC (Wyoming, USA)",
-        "Quota dei ricavi ricorrenti da tutte le sussidiarie WEEK-WORLD",
-        "Diritti di voto proporzionali alla tua partecipazione",
+        "Partecipazione diretta in equity nella HoldCo (MORISES LLC, Wyoming)",
+        "Quota pro-rata dell'8% di royalties IP sulle vendite SAPI",
+        "Partecipazione a 9 flussi di ricavi satellite (WEEK-WORLD)",
         "Report finanziari trimestrali e aggiornamenti per investitori",
-        "Accesso prioritario ai futuri round di finanziamento",
-        "Opportunita di exit: vendite secondarie, buyback o IPO"
+        "Accesso prioritario alla Serie A e future round",
+        "Exit: vendite secondarie, buyback strategico, o IPO/M&A"
       ],
       investorProfile: "Profilo Investitore Ideale",
       profiles: [
-        { label: "Angel Investors", desc: "Investitori accreditati che cercano esposizione PropTech" },
-        { label: "Family Offices", desc: "Capitale a lungo termine che cerca rendimenti immobiliari" },
-        { label: "Venture Capital", desc: "Fondi early-stage con tesi travel/hospitality" },
-        { label: "Partner Strategici", desc: "Sviluppatori immobiliari, catene alberghiere" }
+        { label: "Angel Investors", desc: "Investitori accreditati che cercano esposizione PropTech/travel tech" },
+        { label: "Family Offices", desc: "Capitale a lungo termine che cerca ricavi ricorrenti garantiti da immobili" },
+        { label: "Venture Capital", desc: "Fondi early-stage con tesi travel, hospitality o PropTech" },
+        { label: "Partner Strategici", desc: "Sviluppatori immobiliari, catene alberghiere, OTA, piattaforme viaggio" }
       ],
-      disclaimer: "Questa opportunita di investimento e disponibile solo per investitori accreditati come definito dalle normative sui titoli applicabili."
+      disclaimer: "Questa opportunità di investimento è disponibile solo per investitori accreditati secondo le normative SEC. Gli SVC di WEEK-CHAIN sono prodotti di consumo, NON strumenti di investimento."
     },
     fr: {
-      badge: "Opportunite d'Investissement",
-      title: "Acquerir",
+      badge: "Round Seed 2026",
+      title: "Acquérir",
       titleHighlight: "1% d'Equity",
-      subtitle: "Rejoignez WEEK-CHAIN en tant que partenaire strategique dans la revolution PropTech",
+      subtitle: "Rejoignez WEEK-CHAIN en tant que partenaire stratégique dans la révolution PropTech. Modèle asset-light avec 9 flux de revenus intégrés.",
       priceLabel: "Prix pour 1%",
       price: "$35,000 USD",
       valuationLabel: "Valorisation Pre-money",
@@ -122,24 +161,26 @@ export function InvestmentOffer() {
       minInvestment: "Investissement Minimum",
       minAmount: "1% ($35,000)",
       maxInvestment: "Equity Disponible",
-      maxAmount: "Jusqu'a 15%",
+      maxAmount: "Jusqu'à 15%",
+      roundStatus: "Statut Round Seed",
+      roundPhase: "Q2 2026 - Pré-Lancement",
       whatYouGet: "Ce Que Vous Obtenez",
       benefits: [
-        "Participation directe en equity dans Morises LLC (Wyoming, USA)",
-        "Part des revenus recurrents de toutes les filiales WEEK-WORLD",
-        "Droits de vote proportionnels a votre participation",
-        "Rapports financiers trimestriels et mises a jour investisseurs",
-        "Acces prioritaire aux futurs tours de financement",
-        "Opportunites de sortie: ventes secondaires, rachat ou IPO"
+        "Participation directe en equity dans HoldCo (MORISES LLC, Wyoming)",
+        "Part pro-rata de 8% de royalties PI sur les ventes SAPI",
+        "Participation à 9 flux de revenus satellite (WEEK-WORLD)",
+        "Rapports financiers trimestriels et mises à jour investisseurs",
+        "Accès prioritaire à la Série A et futures rondes",
+        "Sortie: ventes secondaires, rachat stratégique, ou IPO/M&A"
       ],
-      investorProfile: "Profil Investisseur Ideal",
+      investorProfile: "Profil Investisseur Idéal",
       profiles: [
-        { label: "Business Angels", desc: "Investisseurs accredites cherchant une exposition PropTech" },
-        { label: "Family Offices", desc: "Capital long terme cherchant des rendements immobiliers" },
-        { label: "Venture Capital", desc: "Fonds early-stage avec these voyage/hospitalite" },
-        { label: "Partenaires Strategiques", desc: "Promoteurs immobiliers, chaines hotelieres" }
+        { label: "Business Angels", desc: "Investisseurs accrédités cherchant une exposition PropTech/travel tech" },
+        { label: "Family Offices", desc: "Capital long terme cherchant des revenus récurrents garantis par l'immobilier" },
+        { label: "Venture Capital", desc: "Fonds early-stage avec thèse voyage, hospitalité ou PropTech" },
+        { label: "Partenaires Stratégiques", desc: "Promoteurs immobiliers, chaînes hôtelières, OTA, plateformes voyage" }
       ],
-      disclaimer: "Cette opportunite d'investissement n'est disponible que pour les investisseurs accredites tels que definis par les reglementations applicables."
+      disclaimer: "Cette opportunité d'investissement n'est disponible que pour les investisseurs accrédités selon les réglementations SEC. Les SVC de WEEK-CHAIN sont des produits de consommation, PAS des instruments d'investissement."
     }
   }
   
@@ -191,6 +232,10 @@ export function InvestmentOffer() {
                       <p className="text-xs text-muted-foreground mb-1">{t.maxInvestment}</p>
                       <p className="text-lg font-semibold text-foreground">{t.maxAmount}</p>
                     </div>
+                  </div>
+                  <div className="pt-4 border-t border-border/50 mt-4">
+                    <p className="text-xs text-muted-foreground mb-1">{t.roundStatus}</p>
+                    <p className="text-sm font-semibold text-primary">{t.roundPhase}</p>
                   </div>
                 </div>
               </div>

@@ -21,10 +21,11 @@ export function Header() {
   }, [])
 
   const navItems = [
+    { label: t("navDataRoom"), href: "/data-room", highlight: true },
     { label: t("navModel"), href: "/modelo" },
     { label: t("navEcosystem"), href: "/ecosistema" },
     { label: t("navPartners"), href: "/partners" },
-    { label: t("navInvestors"), href: "/invertir", highlight: true },
+    { label: t("navInvest"), href: "/invertir" },
   ]
 
   return (
