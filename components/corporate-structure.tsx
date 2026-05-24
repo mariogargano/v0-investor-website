@@ -163,6 +163,228 @@ export function CorporateStructure() {
         "Sin Expectativa de Ganancias para Usuarios",
         "Mercado Secundario Controlado"
       ]
+    },
+    pt: {
+      badge: "Arquitetura Corporativa",
+      title: "Estrutura Legal",
+      titleHighlight: "de Três Camadas",
+      subtitle: "Otimizada para conformidade regulatória, proteção de ativos e eficiência fiscal entre jurisdições",
+      tiers: [
+        {
+          tier: 1,
+          name: "MORISES LLC",
+          jurisdiction: "Wyoming, USA",
+          type: "Holding de Propriedade Intelectual",
+          icon: Globe,
+          color: "from-primary to-primary/70",
+          borderColor: "border-primary",
+          description: "Proprietária de toda PI, marcas, software core, algoritmos de reserva e protocolos operacionais",
+          keyPoints: [
+            "8% royalty sobre vendas SAPI",
+            "Sem relação direta com consumidores",
+            "Sem propriedade física de imóveis",
+            "Licenciamento global de marca"
+          ],
+          flow: "Licencia software core para SAPI"
+        },
+        {
+          tier: 2,
+          name: "MORISES ASSET INC.",
+          jurisdiction: "Delaware, USA",
+          type: "Holding Patrimonial & SPVs",
+          icon: Building2,
+          color: "from-accent to-accent/70",
+          borderColor: "border-accent",
+          description: "Holding patrimonial que estrutura SPVs mono-propriedade para cada ativo adquirido",
+          keyPoints: [
+            "99% Morises / 1% Admin Local por SPV",
+            "Assina contratos de compra",
+            "Titular das escrituras",
+            "Incorporação Q2 2026"
+          ],
+          flow: "Contrato de Cessão de Capacidade (48+4)"
+        },
+        {
+          tier: 3,
+          name: "WEEK-CHAIN SAPI de CV",
+          jurisdiction: "Playa del Carmen, México",
+          type: "Operação Comercial",
+          icon: FileText,
+          color: "from-chart-3 to-chart-3/70",
+          borderColor: "border-chart-3",
+          description: "Operadora comercial que emite e vende SVCs, gerencia cobrança e conformidade local",
+          keyPoints: [
+            "Emite 48 certificados por propriedade",
+            "Cobrança LATAM",
+            "Conformidade PROFECO & NOM-151",
+            "Gestão comissões agentes"
+          ],
+          flow: "Operações voltadas ao consumidor"
+        }
+      ],
+      intercompanyTitle: "Engenharia de Fluxos Intercompany",
+      intercompanySubtitle: "Conformidade de preços de transferência OCDE para prevenir risco de Estabelecimento Permanente",
+      flows: [
+        { concept: "Royalty de PI", percentage: "8%", recipient: "MORISES LLC", description: "Licenciamento de marcas e software" },
+        { concept: "Cessão de Capacidade", percentage: "Variável", recipient: "SPV → SAPI", description: "48+4 semanas por propriedade" },
+        { concept: "Taxa de Gestão", percentage: "15-20%", recipient: "WEEK-MANAGEMENT", description: "Operação de propriedades" },
+        { concept: "Margem Plataforma", percentage: "11%", recipient: "WEEK-CHAIN", description: "Lucro operacional líquido" }
+      ],
+      complianceTitle: "Conformidade Regulatória",
+      complianceBadges: [
+        "Classificação Não-Security SEC/CNBV",
+        "Apenas Produto de Consumo (Não Investimento)",
+        "Sem Expectativa de Lucros para Usuários",
+        "Mercado Secundário Controlado"
+      ]
+    },
+    it: {
+      badge: "Architettura Corporativa",
+      title: "Struttura Legale",
+      titleHighlight: "a Tre Livelli",
+      subtitle: "Ottimizzata per conformità normativa, protezione degli asset ed efficienza fiscale tra giurisdizioni",
+      tiers: [
+        {
+          tier: 1,
+          name: "MORISES LLC",
+          jurisdiction: "Wyoming, USA",
+          type: "Holding di Proprietà Intellettuale",
+          icon: Globe,
+          color: "from-primary to-primary/70",
+          borderColor: "border-primary",
+          description: "Proprietaria di tutta la PI, marchi, software core, algoritmi di prenotazione e protocolli operativi",
+          keyPoints: [
+            "8% royalty sulle vendite SAPI",
+            "Nessuna relazione diretta con consumatori",
+            "Nessuna proprietà fisica di immobili",
+            "Licenza globale del marchio"
+          ],
+          flow: "Licenza software core a SAPI"
+        },
+        {
+          tier: 2,
+          name: "MORISES ASSET INC.",
+          jurisdiction: "Delaware, USA",
+          type: "Holding Patrimoniale & SPV",
+          icon: Building2,
+          color: "from-accent to-accent/70",
+          borderColor: "border-accent",
+          description: "Holding patrimoniale che struttura SPV mono-proprietà per ogni asset acquisito",
+          keyPoints: [
+            "99% Morises / 1% Admin Locale per SPV",
+            "Firma contratti di acquisto",
+            "Titolare delle proprietà",
+            "Incorporazione Q2 2026"
+          ],
+          flow: "Contratto di Cessione Capacità (48+4)"
+        },
+        {
+          tier: 3,
+          name: "WEEK-CHAIN SAPI de CV",
+          jurisdiction: "Playa del Carmen, Messico",
+          type: "Operazioni Commerciali",
+          icon: FileText,
+          color: "from-chart-3 to-chart-3/70",
+          borderColor: "border-chart-3",
+          description: "Operatore commerciale che emette e vende SVC, gestisce incassi e conformità locale",
+          keyPoints: [
+            "Emette 48 certificati per proprietà",
+            "Incassi LATAM",
+            "Conformità PROFECO & NOM-151",
+            "Gestione commissioni agenti"
+          ],
+          flow: "Operazioni rivolte al consumatore"
+        }
+      ],
+      intercompanyTitle: "Ingegneria Flussi Intercompany",
+      intercompanySubtitle: "Conformità OCDE prezzi di trasferimento per prevenire rischio Stabile Organizzazione",
+      flows: [
+        { concept: "Royalty PI", percentage: "8%", recipient: "MORISES LLC", description: "Licenza marchi e software" },
+        { concept: "Cessione Capacità", percentage: "Variabile", recipient: "SPV → SAPI", description: "48+4 settimane per proprietà" },
+        { concept: "Fee Gestione", percentage: "15-20%", recipient: "WEEK-MANAGEMENT", description: "Operazione proprietà" },
+        { concept: "Margine Piattaforma", percentage: "11%", recipient: "WEEK-CHAIN", description: "Utile operativo netto" }
+      ],
+      complianceTitle: "Conformità Normativa",
+      complianceBadges: [
+        "Classificazione Non-Security SEC/CNBV",
+        "Solo Prodotto di Consumo (Non Investimento)",
+        "Nessuna Aspettativa di Profitto per Utenti",
+        "Mercato Secondario Controllato"
+      ]
+    },
+    fr: {
+      badge: "Architecture Corporative",
+      title: "Structure Juridique",
+      titleHighlight: "à Trois Niveaux",
+      subtitle: "Optimisée pour la conformité réglementaire, la protection des actifs et l'efficacité fiscale entre juridictions",
+      tiers: [
+        {
+          tier: 1,
+          name: "MORISES LLC",
+          jurisdiction: "Wyoming, USA",
+          type: "Holding de Propriété Intellectuelle",
+          icon: Globe,
+          color: "from-primary to-primary/70",
+          borderColor: "border-primary",
+          description: "Propriétaire de toute la PI, marques, logiciel core, algorithmes de réservation et protocoles opérationnels",
+          keyPoints: [
+            "8% royalty sur ventes SAPI",
+            "Pas de relation directe avec consommateurs",
+            "Pas de propriété physique d'immeubles",
+            "Licence mondiale de marque"
+          ],
+          flow: "Licence logiciel core à SAPI"
+        },
+        {
+          tier: 2,
+          name: "MORISES ASSET INC.",
+          jurisdiction: "Delaware, USA",
+          type: "Holding Patrimonial & SPV",
+          icon: Building2,
+          color: "from-accent to-accent/70",
+          borderColor: "border-accent",
+          description: "Holding patrimonial qui structure des SPV mono-propriété pour chaque actif acquis",
+          keyPoints: [
+            "99% Morises / 1% Admin Local par SPV",
+            "Signe contrats d'achat",
+            "Titulaire des propriétés",
+            "Incorporation Q2 2026"
+          ],
+          flow: "Contrat de Cession de Capacité (48+4)"
+        },
+        {
+          tier: 3,
+          name: "WEEK-CHAIN SAPI de CV",
+          jurisdiction: "Playa del Carmen, Mexique",
+          type: "Opérations Commerciales",
+          icon: FileText,
+          color: "from-chart-3 to-chart-3/70",
+          borderColor: "border-chart-3",
+          description: "Opérateur commercial qui émet et vend des SVC, gère les encaissements et la conformité locale",
+          keyPoints: [
+            "Émet 48 certificats par propriété",
+            "Encaissement LATAM",
+            "Conformité PROFECO & NOM-151",
+            "Gestion commissions agents"
+          ],
+          flow: "Opérations orientées consommateur"
+        }
+      ],
+      intercompanyTitle: "Ingénierie Flux Intercompany",
+      intercompanySubtitle: "Conformité OCDE prix de transfert pour prévenir risque d'Établissement Permanent",
+      flows: [
+        { concept: "Royalty PI", percentage: "8%", recipient: "MORISES LLC", description: "Licence marques et logiciel" },
+        { concept: "Cession Capacité", percentage: "Variable", recipient: "SPV → SAPI", description: "48+4 semaines par propriété" },
+        { concept: "Frais Gestion", percentage: "15-20%", recipient: "WEEK-MANAGEMENT", description: "Opération propriétés" },
+        { concept: "Marge Plateforme", percentage: "11%", recipient: "WEEK-CHAIN", description: "Bénéfice opérationnel net" }
+      ],
+      complianceTitle: "Conformité Réglementaire",
+      complianceBadges: [
+        "Classification Non-Security SEC/CNBV",
+        "Produit de Consommation Uniquement (Pas d'Investissement)",
+        "Pas d'Attente de Profit pour Utilisateurs",
+        "Marché Secondaire Contrôlé"
+      ]
     }
   }
   
